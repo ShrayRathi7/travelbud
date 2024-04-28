@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBuddy</title>
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+    <!-- jQuery 1.8 or later, 33 KB -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Fotorama from CDNJS, 19 KB -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+  </head>
+
+  <body>
+    <header>
+      <video src="thapar.mp4"  autoplay muted loop>
+
+      </video>
+
+      <!---Top Right Navigation--->
+      <div class="top-nav">
+        <nav>
+          <i class="fas fa-user-edit" aria-hidden="true"></i>
+          <li style="margin-right: 50px;"><a href="./Registration/registration.html">Register</a></li>
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <li style="margin-right: 50px;"><a href="./Login/login.html">Login</a></li>
+        </nav>
+      </div>
+
+      <!---SearchBox--->
+      <div class="search">
+        <label for="searching" style="color:white; padding-left: 10px;"></label>
+          <input type="text" class="input" placeholder="Find a Buddy">
+          <div class="searchBtn">
+           <i class="fas fa-search"></i>
+        </div>
+      </div>
+
+      <!---Side Navigation--->
+      <div id="mySidebar" class="sidebar"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+          <li><a class="active" href="index.html">Homepage</a></li>
+          <!-- <li><a href="./Event/eventpage.html">Event</a></li>
+          <li><a href="./Booking/Booking.html">Booking</a></li> -->
+          <li><a href="./Contact/Contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div id="sideBtn">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;
+        </span>
+      </div>
+
+      <div class="title">
+
+        <div class="logo">
+          <img src="logo.png" alt="travelbuddy" width="200px" height="200px">
+
+          <!--Overlay for About Us -->
+          <div id="overlay" onclick="off()">
+            <div id="text">
+              <h3>About Us</h3><br><hr><br>
+              Travel Buddy website system are revolving around <br>
+              tourism conceptualization that focuses on the <br>
+              topic of the tourist guide system as the focal point. <br><br>
+
+              Our website is focusing on booking system<br>
+              for the tourist guide based on the packages<br>
+              and location provided by the customer. <br><br>
+
+             Our website also provides the most viewed <br>
+             location and also previous reviews from our past user so <br>
+             they have trouble-free moments to infer their decision. <br>
+           </div>
+         </div>
+         <h1 onclick="on()" id="proname">TRAVEL<br/><br>BUDDY</h1>
+        </div><br>
+      </div>
+
+      <!---Description of the Website--->
+      <div class="description">
+      <p>Website which helps college 
+        individual to find buddies who 
+        want to travel together to the same 
+        location for their journey which can 
+        be their home place so that they can have a companion with them 
+        and security of travelling along 
+        with reduced expenses.
+        This mainly focuses on new 
+        individuals who do not know or 
+        have acquaintance who belong to 
+        the same hometown.
+        <br><br>Get the best buddy with <i><u>TravelBuddy</u></i> now!</p>
+        <br>
+        <div class="to-topplace">
+          <a href="#topplace"> <i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i> </a>
+        </div>
+
+      </div>
+    </header>
+
+    
+    
+    
+  <!---Package-->
+  <div class="allign">
+      <div class="available">
+        <h3>Travel options</h3>
+      </div>
+    <div class="container">
+        <!--1------------------------>
+        <div class="box">
+          <p class="packages"></p>
+          <img src="./img/bus photos.avif" alt="Travel by Bus" class="package">
+          <div class="details">
+            <h2>Travel by Bus</h2>
+            
+            <button onclick="myFunction()">Choose</button>
+          </div>
+        </div>
+        <!--2------------------------>
+        <div class="box">
+          <p class="packages"></p>
+          <img src="taxi.jpg" alt="Travel by car" class="package">
+          <div class="details">
+            <h2>Travel by car</h2>
+            
+            <button onclick="myFunction()">Choose</button>
+          </div>
+        </div>
+        <!--3------------------------>
+        <div class="box">
+          <p class="packages"></p>
+          <img src="./img/train.png" alt="Package C" class="package">
+          <div class="details">
+            <h2>Travel by train</h2>
+            
+            <button onclick="myFunction()">Choose</button>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <!--Past Reviews-->
+    <div class="past-reviews">
+      <h3>Past Reviews from Our Travelers</h3>
+      <div class="content">
+        <div class="review-s">
+        <p id="review">"I will keep on recommending Travel Buddy to my friends."
+          <br/>- AKSHITA </p>
+          </div>
+          <div class="gen">
+          <button onclick="genReview()">Review</button>
+          </div>
+      </div>
+    </div>
+
+
+    <!---Top Visited Place--->
+    <div class="topplace" id="topplace" >
+      <h3>Top Visited Places Nearby You</h3>
+    </div>
+    <div class="placeimg">
+      <div class="fotorama" data-width="1000" data-height="500" data-autoplay="3000" data-stopautoplayontouch="false">
+       
+        <img src="./img/img_cameronhighlands.jpg" alt="Cameron Highlands" data-caption="Manipur">
+        <img src="./img/img_kinabalu.jpg" alt="Kota Kinabalu" data-caption="Shimla">
+        <img src="./img/img_kuching.jpg" alt="Kuching" data-caption="Nainital">
+        
+      </div>
+    </div>
+
+    <button onclick="topFunction()" id="TopMenu" title="Go to top"><i class="fas fa-arrow-up"></i> Top</button>
+
+    <footer>
+      <div class="footer">
+        <ul>
+          <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+      
+    </footer>
+
+      <script src="homepage.js"></script>
+  </body>
+</html>
